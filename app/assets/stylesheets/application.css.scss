@@ -14,11 +14,38 @@
  *= require_self
  */
 
- .landing1_pic{
+.landing1_pic{
   background: image-url("landing1.jpg") no-repeat center center;
-  /*background: image-url("salar-de-uyuni-bolivia.jpg") no-repeat center center;*/
   background-size:cover;
-  /*background-attachment: fixed;*/
-  height: 80vh;
-  width: 100% ;
+}
+.landing1_text{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.landing1_text>h3{
+font-weight: 100;
+}
+.landing2_pic{
+  background: image-url("landing2.jpg") no-repeat center center;
+  background-size:cover;
+}
+.landing2_text{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.landing3_pic{
+  background: image-url("landing3.png") no-repeat center center;
+  background-size:cover;
+}
+.landing3_text{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.landing4_pic{
+  background: image-url("landing4.jpg") no-repeat center center;
+  background-size:cover;
+}
+.landing4_text{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
 }
