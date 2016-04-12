@@ -21,9 +21,31 @@
 .landing1_text{
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
+  margin-bottom: 0px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .landing1_text>h3{
-font-weight: 100;
+  font-weight: 100;
+}
+.preusremail{
+  border-radius: 3px;
+  font-size: 16px;
+  width:500px;
+  height: 40px;
+}
+.preuser_btn{
+  height: 40px;
+  font-size: 16px;
+  width:70px;
+  margin-left:0px;
+  background-color: #d32d28;
+  border:none;
+  border-radius: 3px;
+  margin-left: -5px;
+}
+.preuser_btn:hover{
+  background-color: #ad2a27;
 }
 .landing2_pic{
   background: image-url("landing2.jpg") no-repeat center center;
