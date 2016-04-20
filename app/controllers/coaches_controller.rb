@@ -8,9 +8,37 @@ class CoachesController < ApplicationController
     @preuser = Preuser.new(preuser_params)
     @preuser.save
 
-    redirect_to :action => :landing
+    # redirect_to :action => :landing
+    render action: :landing
   end
 
+  def index
+
+  end
+
+  def new
+
+  end
+
+  def create
+
+  end
+
+  def show
+
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
+  end
 private
 
 def preuser_params

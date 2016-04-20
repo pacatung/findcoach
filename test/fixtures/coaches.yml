@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coach_name: MyString
+  gender: MyString
+  email: MyString
+  phone: MyString
+  descrpition: MyString
+  fb_email: MyString
+
+two:
+  coach_name: MyString
+  gender: MyString
+  email: MyString
+  phone: MyString
+  descrpition: MyString
+  fb_email: MyString
