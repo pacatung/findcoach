@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411131943) do
+ActiveRecord::Schema.define(version: 20160420153850) do
+
+  create_table "coaches", force: :cascade do |t|
+    t.string   "coach_name"
+    t.string   "gender"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "descrpition"
+    t.string   "fb_email"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "preusers", force: :cascade do |t|
     t.string   "preuser_email"
