@@ -15,7 +15,7 @@
  */
 
 .landing1_pic{
-  background: image-url("landing1.jpg") no-repeat center center;
+  background: image-url("landing1.jpg") no-repeat center top;
   background-size:cover;
 }
 .landing1_text{
@@ -72,8 +72,16 @@
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
 }
+.landing5_pic{
+  background: image-url("landing5.jpg") no-repeat center center;
+  background-size:cover;
+}
+.landing5_text{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
 .welcome>.jumbotron{
-  background-color: #00f7f3;
+  background-color: #f3404d;
   padding: 80px 0;
   color:white;
 }
@@ -81,3 +89,27 @@
   font-size: 40px;
   font-weight: 100;
 }
+.navbar {
+  margin-bottom:0px;
+  background: rgba(243, 64, 77, 1);  
+  border-radius: 0px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  border:0px;
+
+  }
+.navbar-default .navbar-brand {
+    color: #FFF;
+
+}
+.navbar-default .navbar-brand:hover{
+    color: #FFF;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+.padingtop{padding:250px 0;}
+.coach-pading{padding:50px 0;}
+.container p{font-size: 20px;}
