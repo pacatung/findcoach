@@ -1,13 +1,15 @@
 <%#= image_tag("landing1.jpg", :width =>'100%', :class=>'landing1_pic') %>
 <div class="landing1_pic">
-  <div class="landing1_text jumbotron text-center">
-    <h1>最有保障、最優秀的<br>私人教練媒合平台</h1>
-    <h3>快點來量身定制專屬的健身，健美，健力課程</h3>
+  <div class="landing1_text  text-center">
+    <h1>快速搜尋您附近的私人教練，開始訓練課程</h1>
+    <h3>全台超過兩百位私人教練，量身定制專屬課程。</h3>
     <br>
-    <%= form_for @preuser, :url => { :controller => 'coaches', :action => 'subscribe_us' } do |p| %>
-        <%= p.text_field :preuser_email, placeholder: '歡迎訂閱我們活動，以掌握最新開課訊息', type:'email', class:'preusremail' %>
-      <%= p.submit '訂閱' , :class => "preuser_btn", onclick:"subscribe_success()" %>
-    <% end %>
+    <div class="container">
+      <%= render 'share/searchform' %>
+    </div>
+    <div class="">
+      找不到您需要的嗎?
+    </div>
   </div>
 </div>
 <div class="landing2_pic">

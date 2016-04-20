@@ -113,3 +113,81 @@
 .padingtop{padding:250px 0;}
 .coach-pading{padding:50px 0;}
 .container p{font-size: 20px;}
+
+/*searchForm*/
+.primary-search{
+    max-width: 559px;
+    margin: 0 auto;
+}
+.input-with-icon {
+    position: relative;
+}
+.input-with-icon i {
+    color: #333e45;
+    left: 0.75rem;
+    position: absolute;
+    top: 17px;
+}
+
+.primary-search .form-group .search-location {
+    padding-left: 2.25rem;
+}
+
+.primary-search .form-group input {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 0;
+    padding: 13px;
+}
+.primary-search .form-group {
+    float: left;
+    display: block;
+    width: 430px;
+    display: inline-block;
+}
+.primary-search .button-cta {
+    font-size: 16px;
+    line-height: normal;
+    margin-left: 1rem;
+    padding: 13px 0;
+    width: 9.75rem;
+}
+.button-cta {
+    background-color: #eb4753;
+    border: 1px solid #eb4753;
+    color: #fff;
+}
+.full {
+    text-align: center;
+    width: 100%;
+}
+.button, button {
+    color: #fff;
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    transition: color 0.1s linear;
+    background-clip: padding-box;
+    border-radius: 3px;
+    border-width: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    line-height: normal;
+    padding: 13px 1.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea, select, select[multiple=multiple] {
+    background-color: #fff;
+    border: 1px solid #94a5b0;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    transition: border-color 150ms ease;
+    width: 100%;
+    color: black;
+}
