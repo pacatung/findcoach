@@ -17,7 +17,7 @@ class CoachesController < ApplicationController
   end
 
   def new
-
+    @coach = Coach.new
   end
 
   def create
