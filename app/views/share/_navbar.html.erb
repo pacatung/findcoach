@@ -16,20 +16,20 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <%# if current_user %>
+        <% if current_user %>
             <li class="dropdown">
               <%#= link_to current_user.name, user_path(current_user) %>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><%#= link_to('編輯個人資料', edit_registration_path(:user),  :style=>"color:black") %></li>
+                <li><%= link_to('編輯個人資料', edit_registration_path(:user),  :style=>"color:black") %></li>
                 <li role="separator" class="divider"></li>
-                <li><%#= link_to('登出', destroy_user_session_path, :method => :delete, :style=>"color:black") %></li>
-        <%# else %>
-                <li><%#= link_to('瀏覽', new_registration_path(:user), :style=>"color:black") %></li>
+                <li><%= link_to('登出', destroy_user_session_path, :method => :delete, :style=>"color:black") %></li>
+        <% else %>
+                <li><%= link_to('瀏覽', new_registration_path(:user), :style=>"color:black") %></li>
 
-                <li><%#= link_to('註冊', new_registration_path(:user), :style=>"color:black") %></li>
-                <li><%#= link_to('登入', new_session_path(:user), :style=>"color:black")%></li>
-        <%# end %>
+                <li><%= link_to('註冊', new_registration_path(:user), :style=>"color:black") %></li>
+                <li><%= link_to('登入', new_session_path(:user), :style=>"color:black")%></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

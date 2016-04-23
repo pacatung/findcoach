@@ -28,7 +28,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'devise'
+gem 'omniauth-facebook'
 
+gem "paperclip", "~> 4.2"
+gem "select2-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
