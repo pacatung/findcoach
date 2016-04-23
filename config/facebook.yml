@@ -1,0 +1,7 @@
+development:
+  app_id: 1699566013662465
+  secret: a874cf1b3695c1b6d0d4bce9294690b4
+
+test:
+  app_id: 1699566013662465
+  secret: a874cf1b3695c1b6d0d4bce9294690b4
