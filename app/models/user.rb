@@ -5,6 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
+  has_one :coach
+
+  def is_coach?
+    self.coach.nil?
+  end
+
+  def display_name
+    self.name || self.email.split("@").first
+  end
 
   def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

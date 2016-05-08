@@ -19,7 +19,16 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
      # resources :users
-     resources :coaches
+
+    resource :users, :only => :show
+    namespace :users do
+      resource :coach do
+        member do
+          post 'status'
+        end
+        resources :lessons
+      end
+    end
 
   # Example resource route with options:
   #   resources :products do

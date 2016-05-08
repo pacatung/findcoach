@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423085853) do
+ActiveRecord::Schema.define(version: 20160508135654) do
 
   create_table "certificates", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +26,24 @@ ActiveRecord::Schema.define(version: 20160423085853) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "coach_cityships", force: :cascade do |t|
+    t.integer  "coach_cityships"
+    t.integer  "coach_id"
+    t.integer  "city_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "coach_cityships", ["city_id"], name: "index_coach_cityships_on_city_id"
+  add_index "coach_cityships", ["coach_id"], name: "index_coach_cityships_on_coach_id"
+
+  create_table "coach_sportships", force: :cascade do |t|
+    t.integer  "coach_id"
+    t.integer  "sport_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "coaches", force: :cascade do |t|
     t.string   "coach_name"
     t.string   "gender"
@@ -35,6 +53,7 @@ ActiveRecord::Schema.define(version: 20160423085853) do
     t.string   "fb_email"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
 
   create_table "preusers", force: :cascade do |t|

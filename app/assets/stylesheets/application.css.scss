@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require select2
+ *= require select2-bootstrap
  */
+
 
 .landing1_pic{
   background: image-url("landing1.jpg") no-repeat center top;
@@ -91,7 +94,7 @@
 }
 .navbar {
   margin-bottom:0px;
-  background: rgba(243, 64, 77, 1);  
+  background: rgba(243, 64, 77, 1);
   border-radius: 0px;
   position:absolute;
   top:0px;

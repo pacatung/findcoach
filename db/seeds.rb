@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+    City.delete_all
+    Sport.delete_all
+
 cities = City.create([{ name: '臺北' }, { name: '新北' },
   { name: '基隆' }, { name: '桃園' }, { name: '新竹' },
   { name: '苗栗' }, { name: '臺中' }, { name: '彰化' },
@@ -13,3 +16,6 @@ cities = City.create([{ name: '臺北' }, { name: '新北' },
   { name: '臺南' }, { name: '高雄' }, { name: '屏東' },
   { name: '宜蘭' }, { name: '花蓮' }, { name: '臺東' },
   { name: '澎湖' }, { name: '金門' }])
+
+
+sports = Sport.create([{ name: '健身' }, { name: '跑步' }, { name: '瑜珈' }, { name: '網球' }])
