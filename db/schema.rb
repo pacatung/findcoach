@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160508135654) do
+ActiveRecord::Schema.define(version: 20160509141934) do
 
   create_table "certificates", force: :cascade do |t|
     t.string   "name"
@@ -55,6 +55,15 @@ ActiveRecord::Schema.define(version: 20160508135654) do
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
   end
+
+  create_table "experences", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "coach_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "experences", ["coach_id"], name: "index_experences_on_coach_id"
 
   create_table "preusers", force: :cascade do |t|
     t.string   "preuser_email"

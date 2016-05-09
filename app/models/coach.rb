@@ -7,4 +7,7 @@ class Coach < ActiveRecord::Base
   has_many :coach_sportships
   has_many :sport, :through => :coach_sportships
 
+  has_many :experiences
+  accepts_nested_attributes_for :experiences, allow_destroy: true, :reject_if => :all_blank
+
 end
