@@ -1,4 +1,5 @@
 class CoachesController < ApplicationController
+    before_action :set_coach, :only => :show
 
   def landing
     @preuser= Preuser.new
@@ -25,7 +26,9 @@ class CoachesController < ApplicationController
   end
 
   def show
-
+    @coaches_all = Coach.where( :status => 'public' ).count
+    @sports = Sport.all
+    @comment = Comment.new
   end
 
   def edit
@@ -40,8 +43,10 @@ class CoachesController < ApplicationController
 
   end
 private
-
-def preuser_params
-  params.require(:preuser).permit(:preuser_email)
-end
+  def set_coach
+    @coach = Coach.find( params[:id] )
+  end
+  def preuser_params
+    params.require(:preuser).permit(:preuser_email)
+  end
 end
