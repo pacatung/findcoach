@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510132020) do
+ActiveRecord::Schema.define(version: 20160510135000) do
 
   create_table "certificates", force: :cascade do |t|
     t.string   "name"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160510132020) do
     t.string   "gender"
     t.string   "email"
     t.string   "phone"
-    t.string   "descrpition"
+    t.string   "description"
     t.string   "fb_email"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

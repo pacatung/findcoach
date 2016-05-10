@@ -72,7 +72,6 @@
       <%= f.label :experiences, "經歷", :class => "col-sm-3" %>
       <div class="col-sm-9">
         <%= f.nested_fields_for :experiences do |ff| %>
-        <%#= f.fields_for :experiences do |ff| %>
         <div class="col-sm-10 col-xs-10">
           <%= ff.text_field :name, :class => "form-control input-sm" %>
         </div>
@@ -113,7 +112,7 @@
     <div class="form-group">
       <%= f.label :skill_list, "專長", :class => "col-sm-2" %>
       <div class="col-sm-10">
-        <%= f.text_field :skill_list, :placeholder => "tag1, tag2", :class=> "form-control", :id => "skill-list" %>
+        <%#= f.text_field :skill_list, :placeholder => "tag1, tag2", :class=> "form-control", :id => "skill-list" %>
         <p class="help-block">例：阻力訓練、體適能項目、顧膝蓋訓練</p>
       </div>
     </div>
@@ -129,7 +128,7 @@
     <div class="form-group">
       <%= f.label :teaching_frame, "教學理念", :class => "col-sm-2" %>
       <div class="col-sm-10">
-        <%= f.text_area :teaching_frame, :rows => 4, :class => "form-control" %>
+        <%#= f.text_area :teaching_frame, :rows => 4, :class => "form-control" %>
       </div>
     </div>
   </div>
@@ -147,24 +146,23 @@
 <script>
   $("#multiple-sport-select").select2();
   $("#multiple-city-select").select2();
-  $("#skill-list").select2({
-  tags: <%= raw(Skill.pluck(:name).to_json) %>,
-  tokenSeparators: [',', ' ']
-  });
+
+
+
   $(function() {
   $('#pictureInput').on('change', function(event) {
-  var files = event.target.files;
-  var image = files[0]
-  var reader = new FileReader();
-  reader.onload = function(file) {
-  var img = new Image();
-  console.log(file);
-  img.src = file.target.result;
-  $('#target').html(img);
-  $('#target img').addClass("img-responsive img-thumbnail");
-  }
-  reader.readAsDataURL(image);
-  console.log(files);
+    var files = event.target.files;
+    var image = files[0]
+    var reader = new FileReader();
+    reader.onload = function(file) {
+      var img = new Image();
+      console.log(file);
+      img.src = file.target.result;
+      $('#target').html(img);
+      $('#target img').addClass("img-responsive img-thumbnail");
+    }
+    reader.readAsDataURL(image);
+    console.log(files);
   });
-  });
+});
 </script>

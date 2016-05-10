@@ -5,7 +5,15 @@
       <p></p>
       <div class="col-md-10 col-md-offset-1">
         <div class="jumbotron">
-
+          <% unless current_user.is_coach? %>
+            <!-- <p>如果您編輯完教練資料，即刻送出審核通知，我們將盡快審核您的資料。</p> -->
+            <!-- <p class="text-center"><%= link_to "送出審核通知", edit_users_coach_path, class: "btn btn-warning" %></p> -->
+            <h1>Hi , <%= current_user.display_name %>  教練</h1>
+            <p>您可以在這邊決定是否公開您的教練資料。</p>
+            <div class="text-center" id="coach-status">
+              <%#= render :partial => "users/coaches/status", :locals => { :coach => current_user.coach } %>
+            </div>
+          <% else %>
             <h1>Hi , <%= current_user.display_name %></h1>
               <p>如果您是教練請填寫完下方基本資料後，註冊前往填寫更詳細的教練履歷哦。</p>
               <%= form_for [:users, @coach], :url => users_coach_path, :html => {:class => 'form-horizontal'} do |f| %>
@@ -50,7 +58,7 @@
                 <div class="form-group">
                   <%= f.submit '註冊填寫教練履歷', :class => "btn btn-primary" %>
                 </div>
-
+              <% end %>
           <% end %>
         </div>
       </div>
