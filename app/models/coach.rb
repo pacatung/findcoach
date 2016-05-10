@@ -1,4 +1,8 @@
 class Coach < ActiveRecord::Base
+
+  validates_format_of :contact_email, :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  validates_inclusion_of :status, :in => ["draft", "public", "delete"]
+
   belongs_to :user
 
   has_many :coach_cityships
