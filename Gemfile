@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'unicorn'
 gem 'devise'
 gem 'omniauth-facebook'
-
+gem 'bootstrap-sass'
 gem "paperclip", "~> 4.2"
 gem "select2-rails"
 gem 'nested_form_fields'
